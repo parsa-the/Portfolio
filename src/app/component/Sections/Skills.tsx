@@ -26,13 +26,15 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
+    
     <motion.section
       ref={ref}
       className="mb-40"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6 }}
-    >
+    >  <div className="absolute right-60 w-18 h-18 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-70 lg:h-70 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 blur-3xl opacity-30 animate-pulse"></div>
+
       <motion.h2
         className="font-bold text-center text-4xl lg:text-5xl"
         initial={{ y: 30, opacity: 0 }}

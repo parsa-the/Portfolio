@@ -8,11 +8,11 @@ export const Projects = [
     url: "https://movie-finder-rouge.vercel.app/",
   },
   {
-    image: "/projects/portfolio.png",
+    image: "/projects/port.png",
     name: "Portfolio",
     techstack: ["next.js", "framer motion","Email js", "tailwind", "vercell"],
     discription:
       "my portfolio with stunning design and animations with framer and tailwind and email js for the contact form",
-    url: "https://movie-finder-rouge.vercel.app/",
+    url: "https://portfolio-kappa-mauve-91.vercel.app",
   },
 ];

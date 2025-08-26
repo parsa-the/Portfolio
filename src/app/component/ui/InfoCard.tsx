@@ -16,13 +16,13 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon, title, description, delay = 0
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
-      className="w-full max-w-sm p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/30 text-white/90 mx-auto"
+      className="w-full max-w-sm p-6 rounded-2xl  bg-white/10 backdrop-blur-xl border border-white/30 text-white/90 mx-auto"
     >
       <header className="flex items-center gap-4 mb-3">
         <Image src={icon} height={30} width={30} alt={title} />
         <h4 className="font-semibold">{title}</h4>
       </header>
-      <p className="font-light text-sm text-center md:text-left">{description}</p>
+      <p className="font-light text-sm text-left md:text-left ">{description}</p>
     </motion.div>
   );
 };
