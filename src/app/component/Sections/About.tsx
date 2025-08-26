@@ -52,6 +52,18 @@ const About = () => {
             description="Passionate about technology and committed to continuous learning. Always excited to take on new challenges."
             delay={0.6}
           />
+          <InfoCard
+            icon="/icons/controller.png"
+            title="Gamer"
+            description="outside of coding, im a gamer, my favorite games include Elden ring,rainbow six siege and dark souls 3"
+            delay={0.6}
+          />
+           <InfoCard
+            icon="/icons/goal.png"
+            title="Future goals"
+            description="Expand my Node.js and UI/UX skills to become a well-rounded full-stack developer, with aspirations to join innovative companies and progress from junior to mid-level within the next few years."
+            delay={0.6}
+          />
         </div>
       </section>
       <Skills />

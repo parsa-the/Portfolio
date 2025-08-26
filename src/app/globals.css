@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 /* In styles/globals.css */
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -13,11 +14,11 @@ html, body {
   box-sizing: border-box;
 }
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, Opera */
+  display: none; /* Chrome, Safari, Opera */
 }
 html::-webkit-scrollbar {
   display: none;

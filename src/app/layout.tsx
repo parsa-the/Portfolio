@@ -1,8 +1,7 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-
-const beVietnamPro = Be_Vietnam_Pro({
+ const beVietnamPro = Be_Vietnam_Pro({
   weight: ["100","200","300","400","500","600","700","800","900"],
   subsets: ["latin"],
   display: "swap",
