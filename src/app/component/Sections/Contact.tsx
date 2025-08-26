@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="max-w-6xl mx-auto px-4">
       <h1 className="font-bold text-center text-4xl lg:text-5xl mb-8">
-        Let's work together!
+        Let&apos;s work together!
       </h1>
 
       <section
@@ -19,7 +19,7 @@ const Contact = () => {
             <div className="w-20 h-px bg-gray-300 mb-2"></div>
             <p className="font-light mb-4 max-w-lg text-gray-500">
               Interested in working together or have a question? Feel free to
-              reach out — I'd love to hear from you.
+              reach out — I&apos;d love to hear from you.
             </p>
 
             <div>

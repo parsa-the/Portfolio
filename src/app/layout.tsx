@@ -2,16 +2,17 @@ import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-export const beVietnamPro = Be_Vietnam_Pro({
+const beVietnamPro = Be_Vietnam_Pro({
   weight: ["100","200","300","400","500","600","700","800","900"],
-  subsets: ["latin","vietnamese"],
+  subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata = {
   viewport: "width=device-width, initial-scale=1.0",
   title:"portfolio",
-  
+  description: "Frontend Developer Portfolio",
+  icons:"/favicon.png"
 };
 
 export default function RootLayout({

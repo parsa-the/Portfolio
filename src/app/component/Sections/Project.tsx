@@ -8,7 +8,7 @@ const Project = () => {
         <h1 className="font-bold text-center text-4xl lg:text-5xl">
           Projects
           <br />
-          that i've worked on
+          that i&apos;ve worked on
         </h1>
         <div className="w-20 h-px bg-gray-300 my-4 mx-auto mb-10"></div>
         {/*jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj*/}

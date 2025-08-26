@@ -19,3 +19,6 @@ html, body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;  /* Chrome, Safari, Opera */
 }
+html::-webkit-scrollbar {
+  display: none;
+}

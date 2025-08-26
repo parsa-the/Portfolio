@@ -33,7 +33,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          I'm a high school student with a passion for programming. I love
+          I&apos;m a high school student with a passion for programming. I love
           creating user-friendly interfaces and writing clean and efficient
           code.
         </motion.p>

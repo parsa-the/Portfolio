@@ -5,10 +5,11 @@ import Contact from "./component/Sections/Contact";
 import Navbar from "./component/ui/Navbar";
 import Project from "./component/Sections/Project";
 import { useEffect } from "react";
+import Image from "next/image";
 const Portfolio = () => {
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
@@ -26,10 +27,12 @@ const Portfolio = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="/icons/gitt.png"
             alt="GitHub"
             className="w-5 h-5 hover:opacity-80 transition-opacity opacity-80 flex-1"
+            height={30}
+            width={30}
           />
         </a>
       </footer>
