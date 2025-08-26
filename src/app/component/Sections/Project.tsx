@@ -45,7 +45,7 @@ const Project = () => {
                       </span>
                     );
                   })}
-                  <a href={card.url} target="_blank" className="w-full text-center bg-white text-black font-bold p-2 rounded-md mt-4">go to website</a>
+                  <a href={card.url} target="_blank" className="w-full text-center bg-white text-black font-bold p-2 rounded-md mt-4  hover:bg-gray-300  ">go to website</a>
                 </div>
               </div>
             );

@@ -9,7 +9,9 @@ body {
   width: 100%;
   max-width: 100vw;
 }
-
+body, * {
+  cursor: url('/icons/cursor.png'), auto !important;
+}
 * {
   box-sizing: border-box;
 }
