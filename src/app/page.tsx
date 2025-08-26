@@ -16,7 +16,7 @@ const Portfolio = () => {
       <About />
       <Project />
       <Contact />
-      <footer className="flex w-full bg-black h-10 items-center gap-4 justify-center mt-8 text-sm">
+      <footer className="flex w-full h-10 items-center gap-4 justify-center mt-8 text-sm">
         <p className="text-gray-600">
           &copy;2025 built with love. All rights reserved
         </p>

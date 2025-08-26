@@ -1,5 +1,6 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const beVietnamPro = Be_Vietnam_Pro({
   weight: ["100","200","300","400","500","600","700","800","900"],
@@ -9,6 +10,8 @@ export const beVietnamPro = Be_Vietnam_Pro({
 
 export const metadata = {
   viewport: "width=device-width, initial-scale=1.0",
+  title:"portfolio",
+  
 };
 
 export default function RootLayout({
@@ -29,6 +32,7 @@ export default function RootLayout({
         }}
       >
         {children}
+        <Toaster position="bottom-right" reverseOrder={false} />
       </body>
     </html>
   );
