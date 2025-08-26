@@ -1,40 +1,49 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const navLinks = [
+  { href: "#Home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#Projects", label: "Projects" },
+  { href: "#Contact", label: "Contact" },
+];
 
 const Navbar = () => {
   return (
-    <nav
-      className="mx-auto mt-7 w-fit flex items-center justify-center gap-x-6 sm:gap-x-17 
-                px-8 py-3 sm:p-5 rounded-lg text-white/90 text-sm font-light tracking-wide 
-                bg-black/20 backdrop-blur-sm border border-gray-600/30 
-                hover:bg-black/30 transition duration-300 
-                shadow-[inset_-7px_7px_9px_-5px_#2b2b2b] sm:w-120"
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        boxShadow: [
+          "0 0 15px rgba(168,85,247,0.25)",
+          "0 0 25px rgba(168,85,247,0.6)",
+          "0 0 15px rgba(168,85,247,0.25)",
+        ],
+      }}
+      transition={{
+        opacity: { duration: 0.8 },
+        y: { duration: 0.8 },
+        boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+      }}
+      className="sticky top-4 z-50 mx-auto w-[90%] sm:w-fit flex items-center justify-center
+                 gap-4 sm:gap-8 px-4 py-3 sm:px-8 sm:py-4
+                 rounded-2xl text-white/90 text-sm sm:text-base font-semibold
+                 bg-white/10 backdrop-blur-xl border border-white/30"
     >
-      <Link
-        href="#Home"
-        className="hover:text-purple-500 transition-colors duration-200 opacity-100"
-      >
-        Home
-      </Link>
-      <Link
-        href="#about"
-        className="hover:text-purple-500 transition-colors duration-200 opacity-100"
-      >
-        About
-      </Link>
-      <Link
-        href="#Projects"
-        className="hover:text-purple-500 transition-colors duration-200"
-      >
-        Projects
-      </Link>
-      <Link
-        href="#Contact"
-        className="hover:text-purple-500 transition-colors duration-200"
-      >
-        Contact
-      </Link>
-    </nav>
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-white/10 opacity-50 pointer-events-none" />
+
+      {navLinks.map(({ href, label }) => (
+        <Link
+          key={href}
+          href={href}
+          className="relative hover:text-purple-400 transition-colors duration-300"
+        >
+          {label}
+        </Link>
+      ))}
+    </motion.nav>
   );
 };
 

@@ -15,7 +15,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth overflow-y-scroll " style={{
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+        }}>
       <body
         className={`min-h-screen text-white ${beVietnamPro.className}`}
         style={{

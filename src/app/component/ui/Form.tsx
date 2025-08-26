@@ -2,14 +2,54 @@ import React from 'react'
 
 const Form = () => {
   return (
-     <div className=" mt-10 w-80 bg-black/20 backdrop-blur-sm border border-gray-600/30 px-8 py-3 rounded-lg text-white/90 text-sm font-light tracking-wide hover:bg-black/30 transition-all duration-300 mx-auto shadow-[inset_-7px_7px_9px_-5px_#2b2b2b] md:text-left">
-        <input placeholder='First Name'></input>
-        <input placeholder='Last Name'></input>
-        <input placeholder='Email'></input>
-        <input placeholder='Subject'></input>
-        <input placeholder='Message'></input>
-        <button>Send</button>
-     </div>
+    <div className='flex justify-end px-4'>
+      <form className="bg-black/20 backdrop-blur-sm border border-gray-600/30 px-4 md:px-8 py-6 rounded-lg w-full max-w-md">
+        
+        {/* Name Fields */}
+        <div className='flex flex-col md:flex-row gap-4 mb-4'>
+          <input 
+            placeholder='First Name' 
+            className='border border-gray-600 rounded h-10 px-3 w-full bg-white/5 text-white placeholder-gray-400 focus:border-gray-500 focus:outline-none'
+            required
+          />
+          <input 
+            placeholder='Last Name' 
+            className='border border-gray-600 rounded h-10 px-3 w-full bg-white/5 text-white placeholder-gray-400 focus:border-gray-500 focus:outline-none'
+            required
+          />
+        </div>
+
+        {/* Other Fields */}
+        <div className='space-y-4 mb-6'>
+          <input 
+            placeholder='Email' 
+            type='email'
+            className='border border-gray-600 rounded h-10 px-3 w-full bg-white/5 text-white placeholder-gray-400 focus:border-gray-500 focus:outline-none'
+            required
+          />
+          <input 
+            placeholder='Subject' 
+            className='border border-gray-600 rounded h-10 px-3 w-full bg-white/5 text-white placeholder-gray-400 focus:border-gray-500 focus:outline-none'
+            required
+          />
+          <textarea 
+            placeholder='Message'
+            rows={4}
+            className='border border-gray-600 rounded px-3 py-2 w-full bg-white/5 text-white placeholder-gray-400 focus:border-gray-500 focus:outline-none resize-none'
+            required
+          />
+        </div>
+
+        {/* Button */}
+        <button 
+          type='submit'
+          className='bg-white text-black py-2 px-6 rounded w-full hover:bg-gray-200 transition-colors'
+        >
+          Send
+        </button>
+
+      </form>
+    </div>
   )
 }
 
