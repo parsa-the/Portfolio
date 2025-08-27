@@ -132,4 +132,4 @@ The project uses Tailwind CSS 4 with PostCSS. Configuration can be found in:
 - `postcss.config.mjs`
 ---
 
-Built with ❤️ using Next.js, React, and Tailwind CSS
+designed and built with ♥️ & ☕
