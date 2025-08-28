@@ -1,8 +1,8 @@
-# 🚀 Personal Portfolio Website
+#  Portfolio Website
 
 A modern, responsive personal portfolio website built with Next.js 15, React 19, and Tailwind CSS. Features smooth animations, interactive components, and a clean design to showcase your skills and projects.
 
-## ✨ Features
+##  Features
 
 - **Modern Design**: Clean and professional portfolio layout
 - **Responsive**: Fully responsive design that works on all devices
@@ -10,7 +10,7 @@ A modern, responsive personal portfolio website built with Next.js 15, React 19,
 - **Contact Form**: Integrated contact form with EmailJS
 - **Performance Optimized**: Built with Next.js for optimal performance
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - **Next.js 15** - React framework for production
@@ -27,36 +27,8 @@ A modern, responsive personal portfolio website built with Next.js 15, React 19,
 - **ESLint** - Code linting and formatting
 - **Git** - Version control
 
-## 📁 Project Structure
 
-```
-port/
-├── src/
-│   ├── app/
-│   │   ├── component/
-│   │   │   ├── Sections/
-│   │   │   │   ├── Hero.tsx          # Hero section with introduction
-│   │   │   │   ├── About.tsx         # About me section
-│   │   │   │   ├── Skills.tsx        # Skills and technologies
-│   │   │   │   ├── Project.tsx       # Projects showcase
-│   │   │   │   └── Contact.tsx       # Contact form
-│   │   │   └── ui/
-│   │   │       ├── Navbar.tsx        # Navigation component
-│   │   │       ├── Card.tsx          # Reusable card component
-│   │   │       └── Form.tsx          # Form components
-│   │   ├── globals.css               # Global styles
-│   │   ├── layout.tsx                # Root layout
-│   │   └── page.tsx                  # Main page component
-│   └── lib/
-│       ├── projects.ts               # Projects data
-│       └── utils.ts                  # Utility functions
-├── public/
-│   ├── icons/                        # Technology and social icons
-│   └── projects/                     # Project images
-└── package.json                      # Dependencies and scripts
-```
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -82,10 +54,6 @@ port/
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📝 Available Scripts
-
-- `npm run dev` - Start development server
-
 ## 🎨 Customization
 
 ### Personal Information
@@ -106,13 +74,6 @@ Update the following files to customize your portfolio:
 - Replace images in `public/icons/` with your own
 - Add project screenshots to `public/projects/`
 - Update favicon and other public assets
-
-## 📱 Responsive Design
-The portfolio is fully responsive with breakpoints:
-- **Mobile**: 320px+
-- **Tablet**: 768px+
-- **Desktop**: 1024px+
-- **Large Desktop**: 1280px+
 
 ## 🔧 Configuration
 
