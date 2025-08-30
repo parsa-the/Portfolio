@@ -4,7 +4,12 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const logos = [
+type SkillItem = {
+  name: string;
+  icon: string;
+};
+
+const logos: SkillItem[] = [
   { name: "next.js", icon: "/icons/next.png" },
   { name: "react", icon: "/icons/react.png" },
   { name: "javascript", icon: "/icons/js.png" },
@@ -15,25 +20,58 @@ const logos = [
   { name: "git", icon: "/icons/git.png" },
 ];
 
-const second = [
+const second: SkillItem[] = [
   { name: "github", icon: "/icons/github.png" },
   { name: "vercel", icon: "/icons/vercel.png" },
   { name: "figma", icon: "/icons/figma.png" },
 ];
+
+type SkillGridProps = {
+  items: SkillItem[];
+  startDelay?: number;
+};
+
+const SkillGrid = ({ items, startDelay = 0 }: SkillGridProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="flex justify-center mb-8">
+      <div className={`grid gap-6 ${items.length > 6 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-2 sm:grid-cols-3'}`}>
+        {items.map((item, index) => (
+          <motion.div
+            key={item.name}
+            initial={{ y: 30, opacity: 0, scale: 0.8 }}
+            animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 30, opacity: 0, scale: 0.8 }}
+            transition={{
+              duration: 0.5,
+              delay: isInView ? index * 0.1 + startDelay : 0,
+              ease: "easeOut",
+            }}
+            whileHover={{ scale: 1.15, rotateY: 15, transition: { duration: 0.2 } }}
+            className="cursor-pointer rounded-lg p-2 hover:shadow-lg transition-shadow"
+          >
+            <Image src={item.icon} alt={item.name} width={90} height={90} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    
     <motion.section
       ref={ref}
       className="mb-40"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6 }}
-    >  <div className="absolute right-60 w-18 h-18 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-70 lg:h-70 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 blur-3xl opacity-30 animate-pulse"></div>
+    >
+      <div className="absolute right-60 w-18 h-18 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-70 lg:h-70 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 blur-3xl opacity-30 animate-pulse" />
 
       <motion.h2
         className="font-bold text-center text-4xl lg:text-5xl"
@@ -60,62 +98,9 @@ const Skills = () => {
         My current tool kit for building and deploying web projects
       </motion.p>
 
-      <div className="flex justify-center mt-12">
-        <div className="grid mb-8 grid-cols-2 sm:grid-cols-4 gap-6">
-          {logos.map((img, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 30, opacity: 0, scale: 0.8 }}
-              animate={
-                isInView
-                  ? { y: 0, opacity: 1, scale: 1 }
-                  : { y: 30, opacity: 0, scale: 0.8 }
-              }
-              transition={{
-                duration: 0.5,
-                delay: isInView ? index * 0.1 + 0.6 : 0,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                scale: 1.15,
-                rotateY: 15,
-                transition: { duration: 0.2 },
-              }}
-              className="cursor-pointer rounded-lg p-2 hover:shadow-lg transition-shadow"
-            >
-              <Image src={img.icon} alt={img.name} width={90} height={90} />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center">
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-5">
-          {second.map((img, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 30, opacity: 0, scale: 0.8 }}
-              animate={
-                isInView
-                  ? { y: 0, opacity: 1, scale: 1 }
-                  : { y: 30, opacity: 0, scale: 0.8 }
-              }
-              transition={{
-                duration: 0.5,
-                delay: isInView ? (logos.length + index) * 0.1 + 0.6 : 0,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                scale: 1.15,
-                rotateY: 15,
-                transition: { duration: 0.2 },
-              }}
-              className="cursor-pointer rounded-lg p-2 hover:shadow-lg transition-shadow"
-            >
-              <Image src={img.icon} alt={img.name} width={90} height={90} />
-            </motion.div>
-          ))}
-        </div>
+      <div className="mt-12">
+        <SkillGrid items={logos} startDelay={0.6} />
+        <SkillGrid items={second} startDelay={1.4} />
       </div>
     </motion.section>
   );

@@ -27,12 +27,12 @@ const Navbar = () => {
         y: { duration: 0.8 },
         boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
       }}
-      className="sticky top-4 z-50 mx-auto w-[90%] sm:w-fit flex items-center justify-center
+      className="sticky top-4 z-0 mx-auto sm:w-fit flex items-center justify-center
                  gap-4 sm:gap-8 px-4 py-3 sm:px-8 sm:py-4
                  rounded-2xl text-white/90 text-sm sm:text-base font-semibold
                  bg-white/10 backdrop-blur-xl border border-white/30"
     >
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-white/10 opacity-50 pointer-events-none" />
+      <div />
 
       {navLinks.map(({ href, label }) => (
         <Link
