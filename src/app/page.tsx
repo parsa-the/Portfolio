@@ -4,13 +4,10 @@ import About from "./component/Sections/About";
 import Contact from "./component/Sections/Contact";
 import Navbar from "./component/ui/Navbar";
 import Project from "./component/Sections/Project";
-import { useEffect } from "react";
 import Image from "next/image";
 const Portfolio = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
+
     <>
       <Navbar />
       <Hero />
