@@ -1,12 +1,16 @@
 import React from "react";
 import Form from "../ui/Form";
-
+import { motion } from "motion/react";
 const Contact = () => {
   return (
     <div className="max-w-6xl mx-auto px-4">
-      <h1 className="font-bold text-center text-4xl lg:text-5xl mb-8">
+      <motion.h1
+           initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{duration:0.5}}
+      className="font-bold text-center text-4xl lg:text-5xl mb-8">
         Let&apos;s work together!
-      </h1>
+      </motion.h1>
 
       <section
         id="Contact"
