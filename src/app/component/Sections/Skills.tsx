@@ -18,7 +18,7 @@ const logos: SkillItem[] = [
 ];
 
 const second: SkillItem[] = [
-  { name: "github", icon: "/icons/gitt.png" },
+  { name: "github", icon: "/icons/github.png" },
   { name: "vercel", icon: "/icons/vercel.png" },
   { name: "figma", icon: "/icons/figma.png" },
 ];
