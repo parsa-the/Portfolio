@@ -9,11 +9,15 @@ const beVietnamPro = Be_Vietnam_Pro({
 });
 
 export const metadata = {
-  viewport: "width=device-width, initial-scale=1.0",
-  title: "portfolio",
-  description: "Frontend Developer Portfolio",
-  icons: "/favicon.png",
+  title: "My App",
+  description: "Cool project",
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 
 export default function RootLayout({
   children,

@@ -11,39 +11,19 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        boxShadow: [
-          "0 0 15px rgba(168,85,247,0.25)",
-          "0 0 25px rgba(168,85,247,0.6)",
-          "0 0 15px rgba(168,85,247,0.25)",
-        ],
-      }}
-      transition={{
-        opacity: { duration: 0.8 },
-        y: { duration: 0.8 },
-        boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-      }}
-      className="sticky top-4 z-0 mx-auto sm:w-fit flex items-center justify-center
-                 gap-4 sm:gap-8 px-4 py-3 sm:px-8 sm:py-4
-                 rounded-2xl text-white/90 text-sm sm:text-base font-semibold
-                 bg-white/10 backdrop-blur-xl border border-white/30"
-    >
-      <div />
-
-      {navLinks.map(({ href, label }) => (
-        <Link
-          key={href}
-          href={href}
-          className="relative hover:text-purple-400 transition-colors duration-300"
-        >
-          {label}
-        </Link>
-      ))}
-    </motion.nav>
+    <div className="flex justify-center mb-10">
+      <nav className="fixed top-0.5 z-100 flex gap-x-6 mt-3 backdrop-blur-xl border border-white/20 p-4 w-110 rounded-lg justify-center">
+        {navLinks.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className="relative hover:text-violet-300 transition-colors"
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
+    </div>
   );
 };
 
