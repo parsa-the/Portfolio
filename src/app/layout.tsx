@@ -9,8 +9,8 @@ const beVietnamPro = Be_Vietnam_Pro({
 });
 
 export const metadata = {
-  title: "My App",
-  description: "Cool project",
+  title: "parsa protfolio",
+  description: "Portfolio project",
 };
 
 export const viewport = {
