@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 const Project = () => {
   return (
-    <section id="Projects" className="flex mb-30 h-450 items-center justify-center">
+    <section id="Projects" className="flex mb-30 h-230 items-center justify-center">
       <div>
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
