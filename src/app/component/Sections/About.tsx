@@ -7,24 +7,17 @@ import InfoCard from "../ui/InfoCard";
 const About = () => {
   return (
     <>
-      <section id="about" className="py-16 px-4 max-w-5xl mx-auto mb-45">
+      <section id="about" className="py-16 px-4 max-w-5xl mx-auto mb-45 ">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           className="font-bold text-center text-4xl lg:text-5xl"
         >
           About me
         </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="w-20 h-px bg-gray-300 my-4 mx-auto"
-        />
+<motion.hr className="mt-4 mb-4 mx-auto" initial={{width:0}} animate={{width:200}}></motion.hr>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}

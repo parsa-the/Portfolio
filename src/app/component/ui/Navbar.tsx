@@ -12,7 +12,7 @@ const navLinks = [
 const Navbar = () => {
   return (
     <div className="flex justify-center mb-10">
-      <nav className="fixed top-0.5 z-100 flex mt-3 backdrop-blur-xl border border-white/20   rounded-lg justify-center p-2 w-79 pt-3 pb-3 gap-x-5 sm:p-4 sm:gap-x-6 sm:w-110 ">
+      <nav className="fixed top-0.5 z-100 flex mt-3 backdrop-blur-sm border border-white/20   rounded-lg justify-center p-2 w-79 pt-3 pb-3 gap-x-5 sm:p-4 sm:gap-x-6 sm:w-110 ">
         {navLinks.map(({ href, label }) => (
           <Link
             key={href}

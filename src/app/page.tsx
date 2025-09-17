@@ -14,8 +14,8 @@ const Portfolio = () => {
       <About />
       <Project />
       <Contact />
-      <footer className="flex w-full h-10 items-center gap-4 justify-center mt-8 text-sm">
-        <p className="text-gray-600">
+      <footer className="flex w-full h-10 items-center gap-4` justify-center mt-8 text-sm backdrop-blur-2xl ">
+        <p className="text-gray-600 pl-4">
           &copy;2025 built with love. All rights reserved
         </p>
         <p>|</p>
