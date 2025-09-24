@@ -38,6 +38,6 @@ export const OnePage = [
     ],
     discription:
       "realtime & fast chat application made using supabse for backend and next js for frontend ",
-    url: "https://portfolio-kappa-mauve-91.vercel.app",
+    url: "https://chat-app-gules-six-85.vercel.app",
   },
 ];
