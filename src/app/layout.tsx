@@ -1,3 +1,4 @@
+
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
@@ -37,9 +38,8 @@ export default function RootLayout({
           backgroundColor: "#000",
           backgroundImage: "radial-gradient(circle, #333 1px, transparent 1px)",
           backgroundSize: "20px 20px",
-          margin: 0, // ensures no default body margin
-        }}
-      >
+          margin: 0,
+        }}>
         {children}
         <SpeedInsights />
         <Toaster position="bottom-right" reverseOrder={false} />
