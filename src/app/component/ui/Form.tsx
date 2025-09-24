@@ -28,7 +28,7 @@ const Form = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
-        toast.success("✅ Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFirstname("");
         setLastname("");
         setEmail("");
@@ -36,7 +36,7 @@ const Form = () => {
         setMessage("");
       })
       .catch(() => {
-        toast.error("❌ Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       });
   };
 
@@ -44,9 +44,8 @@ const Form = () => {
     <div className="flex justify-end px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-black/20 backdrop-blur-sm border border-gray-600/30 px-4 md:px-8 py-6 rounded-lg w-full max-w-md font-extralight"
+        className="bg-black/20 border border-gray-600/30 backdrop-blur-2xl px-4 md:px-8 py-6 rounded-lg w-full max-w-md font-extralight"
       >
-        {/* Name Fields */}
         <div className="flex flex-col md:flex-row gap-4 mb-4">
           <input
             placeholder="First Name"
@@ -64,7 +63,6 @@ const Form = () => {
           />
         </div>
 
-        {/* Other Fields */}
         <div className="space-y-4 mb-6">
           <input
             placeholder="Email"
@@ -90,8 +88,6 @@ const Form = () => {
             required
           />
         </div>
-
-        {/* Button */}
         <button
           type="submit"
           className="bg-white text-black py-2 px-6 rounded w-full hover:bg-gray-200 transition-colors font-bold flex items-center justify-center gap-2"
