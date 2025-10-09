@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <section
       id="Projects"
-      className="flex mt-125 mb-125 h-450 items-center justify-center sm:h-250"
+      className="flex mt-100 mb-50  items-center justify-center "
     >
       <div>
         <motion.h1
@@ -26,7 +26,7 @@ const Project = () => {
           className="mt-7 w-70 mx-auto mb-7"
         ></motion.hr>
         {/*jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj*/}
-        <div className="flex flex-wrap  justify-center gap-5">
+        <div className="flex flex-wrap bg-black  justify-center gap-5">
           {Projects.map((card, index) => {
             return (
               <div key={index} className="w-80 border rounded-lg p-5 shadow-lg">
