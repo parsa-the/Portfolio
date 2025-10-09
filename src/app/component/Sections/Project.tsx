@@ -42,21 +42,11 @@ const Project = () => {
                 <h1 className="font-bold text-2xl mb-3 text-center mt-8">
                   {card.name}
                 </h1>
-                <motion.hr
-                  initial={{ width: 50 }}
-                  whileInView={{ width: 290 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-7 w-70 mx-auto mb-7"
-                ></motion.hr>
+                <motion.hr className="mt-7 w-70 mx-auto mb-7"></motion.hr>
                 <p className="font-extralight text-sm mb-4 text-center">
                   {card.discription}
                 </p>
-                <motion.hr
-                  initial={{ width: 50 }}
-                  whileInView={{ width: 290 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-7 w-70 mx-auto mb-7"
-                ></motion.hr>
+                <motion.hr className="mt-7 w-70 mx-auto mb-7"></motion.hr>
                 <p className="font-medium mb-3">Tech stack:</p>
                 <div className="flex flex-wrap gap-2 justify-center ">
                   {card.techstack.map((tech, techIndex) => {

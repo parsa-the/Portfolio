@@ -5,7 +5,7 @@ export const Projects = [
     techstack: [
       "appwrite",
       "react.js",
-      "TMDB",
+      "react router",
       "framer motion",
       "tailwind",
       "vercel",
