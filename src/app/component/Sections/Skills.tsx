@@ -3,18 +3,18 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 const skills = [
-  { name: "next.js", icon: "/icons/next.png" },
-  { name: "react", icon: "/icons/react.png" },
-  { name: "javascript", icon: "/icons/js.png" },
-  { name: "tailwind", icon: "/icons/tailwind.png" },
-  { name: "html", icon: "/icons/html.png" },
-  { name: "css", icon: "/icons/css.png" },
-  { name: "ts", icon: "/icons/ts.png" },
-  { name: "git", icon: "/icons/git.png" },
-  { name: "github", icon: "/icons/github.png" },
-  { name: "vercel", icon: "/icons/vercel.png" },
-  { name: "figma", icon: "/icons/figma.png" },
-  {name:"Motion" , icon:"/icons/Motion.png"}
+  { name: "Next.js", icon: "/icons/next.png" },
+  { name: "React", icon: "/icons/react.png" },
+  { name: "Javascript", icon: "/icons/js.png" },
+  { name: "Tailwind", icon: "/icons/tailwind.png" },
+  { name: "Html", icon: "/icons/html.png" },
+  { name: "Css", icon: "/icons/css.png" },
+  { name: "TypeScript", icon: "/icons/ts.png" },
+  { name: "Git", icon: "/icons/git.png" },
+  { name: "Github", icon: "/icons/github.png" },
+  { name: "Vercel", icon: "/icons/vercel.png" },
+  { name: "Figma", icon: "/icons/figma.png" },
+  { name: "Motion", icon: "/icons/Motion.png" },
 ];
 
 export default function Skills() {
@@ -48,7 +48,7 @@ export default function Skills() {
       <div className="flex justify-center mt-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {skills.map((s, i) => (
-            <motion.div key={i} whileHover={{ scale: 1.2 }}>
+            <motion.div key={i} whileHover={{ scale: 1.2 }} className="group">
               <motion.div
                 key={s.name}
                 initial={{ opacity: 0, y: 60 }}
@@ -57,13 +57,7 @@ export default function Skills() {
                 className="flex flex-col items-center"
               >
                 <Image src={s.icon} alt={s.name} width={90} height={90} />
-                <motion.span
-                
-                  initial={{ opacity: 0,y:10 }}
-                  whileHover={{ opacity: 1 ,y:0}}
-                  transition={{duration:0.2}}
-                  className="text-sm"
-                >
+                <motion.span className="text-sm opacity-0 group-hover:opacity-50">
                   {s.name}
                 </motion.span>
               </motion.div>

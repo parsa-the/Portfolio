@@ -63,7 +63,7 @@ const Project = () => {
                   <a
                     href={card.url}
                     target="_blank"
-                    className="flex w-full text-center justify-center bg-white text-black font-bold p-2 rounded-md mt-4  hover:bg-gray-300  "
+                    className="flex w-full transition-colors text-center justify-center bg-white text-black font-bold p-2 rounded-md mt-4  hover:bg-gray-300  "
                   >
                     go to website
                   </a>
