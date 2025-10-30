@@ -13,6 +13,7 @@ const Project = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="font-bold text-center text-4xl lg:text-5xl"
         >
           Projects
@@ -23,13 +24,13 @@ const Project = () => {
           initial={{ width: 0 }}
           whileInView={{ width: 290 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className="mt-7 w-70 mx-auto mb-7"
         ></motion.hr>
-        {/*jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj*/}
-        <div className="flex flex-wrap bg-black  justify-center gap-5">
+        <div className="flex flex-wrap   justify-center gap-5">
           {Projects.map((card, index) => {
             return (
-              <div key={index} className="w-80 border rounded-lg p-5 shadow-lg">
+              <div key={index} className="w-80 bg-black border rounded-lg p-5 shadow-lg">
                 <div className="h-60 w-full overflow-auto rounded-lg mb-4 hide-scrollbar">
                   <Image
                     className="w-full h-auto"
@@ -51,12 +52,16 @@ const Project = () => {
                 <div className="flex flex-wrap gap-2 justify-center ">
                   {card.techstack.map((tech, techIndex) => {
                     return (
-                      <span
+                      <motion.span
+                      initial={{scale:0}}
+                      whileInView={{scale:1}}
+                      viewport={{once:true}}
+                      transition={{duration:techIndex*0.1}}
                         key={techIndex}
                         className="border border-violet-500 rounded-sm px-3 py-1 text-sm font-extralight shadow-[inset_0px_0px_16px_4px_rgba(195,_125,_224,_0.40)]"
                       >
                         {tech}
-                      </span>
+                      </motion.span>
                     );
                   })}
 

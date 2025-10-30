@@ -12,6 +12,7 @@ const About = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{once:true}}
           className="font-bold text-center text-4xl lg:text-5xl"
         >
           About me
@@ -31,7 +32,6 @@ const About = () => {
           code.
         </motion.p>
 
-        {/* Cards */}
         <div className="flex flex-wrap gap-y-10 gap-x-10">
           <InfoCard
             icon="/icons/light.png"

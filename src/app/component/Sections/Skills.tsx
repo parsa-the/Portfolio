@@ -26,6 +26,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="font-bold text-center text-4xl lg:text-5xl"
       >
         Skills & Technologies
@@ -33,12 +34,14 @@ export default function Skills() {
 
       <motion.hr
         initial={{ width: 0 }}
+        viewport={{ once: true }}
         whileInView={{ width: 290 }}
         className="mt-7 mx-auto border-t-2"
       />
 
       <motion.p
         initial={{ opacity: 0, y: 50 }}
+        viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mx-auto w-80 lg:w-96 mt-4"
       >
@@ -48,10 +51,16 @@ export default function Skills() {
       <div className="flex justify-center mt-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {skills.map((s, i) => (
-            <motion.div key={i} whileHover={{ scale: 1.2 }} className="group">
+            <motion.div
+              key={i}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.2 }}
+              className="group"
+            >
               <motion.div
                 key={s.name}
                 initial={{ opacity: 0, y: 60 }}
+                viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="flex flex-col items-center"

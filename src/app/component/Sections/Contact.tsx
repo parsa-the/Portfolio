@@ -8,6 +8,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="font-bold text-center text-4xl lg:text-5xl mb-8"
       >
         Let&apos;s work together!
