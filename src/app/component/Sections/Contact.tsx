@@ -1,4 +1,4 @@
-import React from "react";
+"use client"
 import Form from "../ui/Form";
 import { motion } from "motion/react";
 const Contact = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+"use client"
 import { Projects } from "../ui/Card";
 import Image from "next/image";
 import { motion } from "motion/react";
