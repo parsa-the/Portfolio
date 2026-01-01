@@ -20,7 +20,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.04 }}
-      className="w-full max-w-sm p-6 rounded-2xl bg-zinc-900/50 backdrop-blur-xl border-t border-r border-white/90 text-white/90 mx-auto"
+      className="w-full max-w-sm p-6 rounded-2xl bg-zinc-900/50 backdrop-blur-xl border-t border-r border-white/30 text-white/90 mx-auto"
     >
       <header className="flex items-center gap-4 mb-3">
         <Image src={icon} height={30} width={30} alt={title} />
