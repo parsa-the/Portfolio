@@ -49,7 +49,7 @@ export default function Skills() {
       </motion.p>
 
       <div className="flex justify-center mt-12">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2  sm:grid-cols-4 gap-6">
           {skills.map((s, i) => (
             <motion.div
               key={i}
@@ -66,7 +66,7 @@ export default function Skills() {
                 className="flex flex-col items-center"
               >
                 <Image src={s.icon} alt={s.name} width={90} height={90} />
-                <motion.span className="text-sm opacity-0 group-hover:opacity-50">
+                <motion.span className="text-sm opacity-0 group-hover:opacity-50 bg-black">
                   {s.name}
                 </motion.span>
               </motion.div>
